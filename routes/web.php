@@ -11,12 +11,12 @@
 |
 */
 
-Route::get('/', 'AdminAuth\LoginController@showLoginForm');
+Route::get('/', 'World\PublicController@showHome');
 
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('admin.login');
   Route::post('/login', 'AdminAuth\LoginController@login');
-  Route::post('/logout', 'AdminAuth\LoginController@logout')->name('admin.logout');
+  Route::get('/logout', 'AdminAuth\LoginController@logout')->name('admin.logout');
 
   Route::get('/register', 'AdminAuth\RegisterController@showRegistrationForm')->name('admin.register');
   Route::post('/register', 'AdminAuth\RegisterController@register');

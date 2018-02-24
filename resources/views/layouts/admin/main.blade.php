@@ -11,6 +11,10 @@
 	<link rel="stylesheet" href="{{ asset('admin/assets/vendor/font-awesome/css/font-awesome.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/vendor/linearicons/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('admin/assets/vendor/chartist/css/chartist-custom.css') }}">
+	<link rel="stylesheet" href="{{ asset('admin/assets/vendor/selectize.js/dist/css/selectize.css') }}">
+
+	<link rel="stylesheet" href="{{ asset('admin/assets/css/bus.css') }}">
+
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="{{ asset('admin/assets/css/main.css') }}">
 	
@@ -43,6 +47,18 @@
 		
 		<div class="main">
 			<!-- MAIN CONTENT -->
+
+			@if(Session::has('message'))
+            <div class="row">
+               <div class="col-lg-12">
+                     <div class="alert {{ Session::get('alert-class', 'alert-info') }}">
+                           <button type="button" class="close" data-dismiss="alert">×</button>
+                           {!! Session::get('message') !!}
+                     </div>
+                  </div>
+            </div>
+            @endif
+            
 			<div class="main-content">
 				<div class="container-fluid">
 					@yield('content')
@@ -66,6 +82,7 @@
 	<script src="{{ asset('admin/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js') }}"></script>
 	<script src="{{ asset('admin/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js') }}"></script>
 	<script src="{{ asset('admin/assets/vendor/chartist/js/chartist.min.js') }}"></script>
+	<script src="{{ asset('admin/assets/vendor/selectize.js/dist/js/standalone/selectize.min.js') }}"></script>
 	<script src="{{ asset('admin/assets/scripts/klorofil-common.js') }}"></script>
 	<script>
 		$(function() {

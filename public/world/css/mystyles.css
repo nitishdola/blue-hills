@@ -1,0 +1,22 @@
+/*YOUR CUSTOM STYLES*/
+.bg-parallax {
+	/*background: url('../img/backgrounds/back.png');*/
+}
+
+.clearbg {
+	background:#fff;	
+}
+.offers{
+	padding:10px;
+	margin-left:1px;
+}
+.route-section { 
+	padding-top: 40px; 
+	
+}
+.section-divider{
+	height:20px;	
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}
