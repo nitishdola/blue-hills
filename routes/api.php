@@ -16,3 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('get-all-cities', 'REST\API\APIController@getAllCities')->name('api.get_all_cities');
+
+Route::get('get-layout', 'REST\API\APIController@getSeatLayout')->name('api.get_layout');

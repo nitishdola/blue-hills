@@ -75,12 +75,13 @@ $('.typeahead').typeahead({
 
 
 $('input.date-pick, .input-daterange, .date-pick-inline').datepicker({
-    todayHighlight: true
+    todayHighlight: true,
+    dateFormat: 'dd-mm-yy'
 });
 
 
 
-$('input.date-pick, .input-daterange input[name="start"]').datepicker('setDate', 'today');
+//$('input.date-pick, .input-daterange input[name="start"]').datepicker(dateFormat: 'dd-mm-yy');
 $('.input-daterange input[name="end"]').datepicker('setDate', '+7d');
 
 $('input.time-pick').timepicker({

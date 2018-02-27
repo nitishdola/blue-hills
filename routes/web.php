@@ -70,3 +70,25 @@ Route::group(['prefix' => 'agent'], function () {
   Route::get('/password/reset', 'AgentAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
   Route::get('/password/reset/{token}', 'AgentAuth\ResetPasswordController@showResetForm');
 });
+
+
+Route::group(['prefix' => 'search'], function () {
+  Route::get('/', [
+      'as' => 'search',
+      'uses' => 'World\Search\SearchController@search'
+  ]);
+
+  Route::get('/create', [
+      'as' => 'seat_layout.create',
+      'middleware' => ['admin'],
+      'uses' => 'Admin\SeatLayout\SeatLayoutsController@create'
+  ]);
+
+  Route::post('/save', [
+      'as' => 'seat_layout.store',
+      'middleware' => ['admin'],
+      'uses' => 'Admin\SeatLayout\SeatLayoutsController@store'
+  ]);
+
+});
+

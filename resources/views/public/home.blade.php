@@ -25,18 +25,20 @@
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="tab-4">
                                         <h2 class="section-title">Book Bus Tickets</h2>
-                                        <form>
+                                        <form class="form-horizontal" role="form" method="GET" action="{{ url('/search') }}">
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
+                                                <div class="col-md-5">
+                                                    <div class="form-group form-group-lg form-group-icon-left">
                                                         <label>Leaving From</label>
-                                                        <input class="typeahead form-control" placeholder="FROM" type="text" />
+                                                        
+                                                        {!! Form::select('source_city', $cities, null, ['class' => 'city-selection', 'id' => 'source_city', 'autocomplete' => 'off', 'required' => true, 'placeholder' => 'FROM']) !!}
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-map-marker input-icon"></i>
+                                                <div class="col-md-1"></div>
+                                                <div class="col-md-5">
+                                                    <div class="form-group form-group-lg form-group-icon-left">
                                                         <label>Going to</label>
-                                                        <input class="typeahead form-control" placeholder="TO" type="text" />
+                                                         {!! Form::select('destination_city', $cities, null, ['class' => 'city-selection', 'id' => 'source_city', 'autocomplete' => 'off', 'required' => true, 'placeholder' => 'TO']) !!}
                                                     </div>
                                                 </div>
                                             </div>
@@ -45,12 +47,12 @@
                                                     <div class="col-md-3">
                                                         <div class="form-group form-group-lg form-group-icon-left"><i class="fa fa-calendar input-icon input-icon-highlight"></i>
                                                             <label>Journey Date</label>
-                                                            <input class="form-control" name="start" type="text" />
+                                                            <input class="form-control journey-date" name="journey_date" type="text" />
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a class="btn btn-primary btn-lg" href="search.html">Search Buses</a>
+                                            <button class="btn btn-primary btn-lg" type="submit">Search Buses</button>
                                         </form>
                                     </div>
                                    
@@ -185,3 +187,13 @@
 </div>
 
 @endsection
+
+@section('pageJs')
+<script>
+$('.city-selection').selectize({ create : false, sortField: 'text' });
+$('input.journey-date').datepicker({
+    dateFormat: 'mm-dd-yy' 
+});
+
+</script>
+@stop

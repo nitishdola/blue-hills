@@ -62,19 +62,25 @@ class BusesController extends Controller
                     $bus_routes = [];
                     $bus_routes['bus_id']   = $bus->id;
                     $bus_routes['route_id'] = $route;
+
+                    $validator = Validator::make($bus_routes, BusRoute::$rules);
+                    if ($validator->fails()) return Redirect::back()->withErrors($validator)->withInput();
+
                     BusRoute::create($bus_routes);
                 }
 
-                $class .= 'alert-success';
-                $message .= 'Bus added successfully !';
+                $class      .= 'alert-success';
+                $message    .= 'Bus added successfully !';
             }else{
-                $class .= 'alert-danger';
-                $message .= 'Unable store Layout !';
+                $class      .= 'alert-danger';
+                $message    .= 'Unable store Layout !';
             }
         }catch(ValidationException $e)
         {
             return Redirect::back();
         }
+
+        DB::commit();
 
         return Redirect::back()->with('message', $message);
     }

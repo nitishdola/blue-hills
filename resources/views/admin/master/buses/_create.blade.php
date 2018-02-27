@@ -8,7 +8,7 @@
 {!! Form::select('bus_type', $bus_types, null, ['class' => 'form-control', 'id' => 'bus_type', 'required' => true, 'placeholder' => 'Select Bus Type']) !!}
 
 <br>
-{!! Form::select('bus_routes[]', $bus_route_list, null, ['class' => '', 'multiple' => true, 'id' => 'select-bus-routes', 'required' => true, 'placeholder' => 'Select Bus Route(s)']) !!}
+{!! Form::select('bus_routes[]', $bus_route_list, null, ['class' => '', 'id' => 'select-bus-routes', 'required' => true, 'placeholder' => 'Select Bus Route']) !!}
 
 <br>
 {!! Form::select('seat_layout_id', $seat_layouts_list, null, ['class' => 'form-control', 'id' => 'seat_layout_id', 'required' => true, 'placeholder' => 'Select Bus Layout']) !!}

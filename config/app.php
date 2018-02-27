@@ -179,6 +179,8 @@ return [
 
         Collective\Html\HtmlServiceProvider::class,
 
+        'App\Providers\HelperServiceProvider',
+
     ],
 
     /*
@@ -230,6 +232,9 @@ return [
 
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
+
+        'Helper' => App\Helpers\Helper::class,
 
     ],
 

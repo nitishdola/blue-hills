@@ -13,7 +13,8 @@
 @section('pageJs')
 <script>
 $('#select-bus-routes').selectize({
-    maxItems: 3
+    sortField: 'text',
+    create: false
 });
 </script>
 @stop
@@ -29,6 +30,10 @@ $('#select-bus-routes').selectize({
             <h3 class="panel-title">Inputs</h3>
         </div>
         <div class="panel-body">
+            @if ($errors->any())
+                {{ implode('', $errors->all('<div>:message</div>')) }}
+            @endif
+
             <form class="form-horizontal" role="form" method="POST" action="{{ url('/admin/bus/save') }}">
                         {{ csrf_field() }}
 

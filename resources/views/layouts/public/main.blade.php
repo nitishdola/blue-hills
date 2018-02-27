@@ -25,6 +25,10 @@
     <link rel="stylesheet" href="{{ asset('world/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('world/css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('world/css/icomoon.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('world/selectize.js/dist/css/selectize.css') }}">
+
+
     <link rel="stylesheet" href="{{ asset('world/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('world/css/mystyles.css') }}">
     <script src="js/modernizr.js"></script>
@@ -33,7 +37,7 @@
 	<!--FONTS-->
 	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
 	<!--/FONTS-->
-    @section('pageCss')
+    @yield('pageCss')
 </head>
 
 <body class="boxed" style="background:url({{ url('world/img/patterns/dimension.png') }}">
@@ -74,6 +78,7 @@
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
 
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"></script>
+        <script src="{{ asset('world/selectize.js/dist/js/standalone/selectize.min.js') }}"></script>
 		<script>
 		$(document).ready(function(){
 		  // set up click/tap panels
@@ -97,7 +102,7 @@
 		});
 		</script>
 
-        @section('pageJs')
+        @yield('pageJs')
     </div>
 </body>
 

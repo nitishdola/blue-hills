@@ -14,4 +14,9 @@ class BusRoute extends Model
     	'bus_id' 			=>  'required|exists:buses,id',
     	'route_id' 			=>  'required|exists:routes,id'
     ];
+
+    public function bus()
+	{
+		return $this->belongsTo('App\Master\Bus', 'bus_id');
+	}
 }
