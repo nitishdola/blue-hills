@@ -71,6 +71,22 @@ Route::group(['prefix' => 'bus'], function () {
         'middleware' => ['admin'],
         'uses' => 'Admin\Bus\RoutesController@store'
     ]);
+
+
+    Route::group(['prefix' => 'schedule'], function () {
+      Route::get('/create', [
+        'as' => 'bus.routes.schedule.create',
+        'middleware' => ['admin'],
+        'uses' => 'Admin\Bus\RouteSchdulesController@create'
+      ]);
+
+      Route::post('/save', [
+        'as' => 'bus.routes.schedule.store',
+        'middleware' => ['admin'],
+        'uses' => 'Admin\Bus\RouteSchdulesController@store'
+      ]);
+
+    });
   });
 
 });

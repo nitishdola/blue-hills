@@ -10,6 +10,9 @@
 				<ul class="nav">
 					<li><a href="{{ route('admin.bus.routes.create') }}" class=""> Add Bus Route</a></li>
 					<li><a href="javascript:void(0)" class="">View All Bus Route</a></li>
+
+					<li><a href="{{ route('admin.bus.routes.schedule.create') }}" class=""> Add Bus Schedule</a></li>
+					
 				</ul>
 			</div>
 		</li>

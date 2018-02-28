@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 use DB, Validator, Redirect, Auth, Crypt;
 
-use App\Master\BusRoute;
+use App\Master\BusRoute, App\Master\RouteSchedules;
 
 use Helper;
 
@@ -26,7 +26,8 @@ class SearchController extends Controller
 			
 			$route_id = $route->id;
 
-			$search_results = BusRoute::with('bus')->where('route_id', $route_id)->get(); //dd($search_results);
+			//$search_results = BusRoute::with('bus')->where('route_id', $route_id)->get(); 
+			$search_results = RouteSchedules::where('route_id', $route_id)->get(); 
 
 			return view('public.search.result', compact('search_results', 'source_city_name', 'destination_city_name', 'journey_date'));
     	}
