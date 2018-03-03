@@ -12,7 +12,7 @@ class Bus extends Model
 
     public static $rules = [
     	'bus_name' 			=>  'required|max:127',
-    	'bus_number' 		=>  'required|unique:buses|max:30',
+    	'bus_number' 		=>  'required|max:30|unique:buses',
     	'bus_type' 			=>  'required|max:50',
     	'seat_layout_id' 	=> 'required|exists:seat_layouts,id'
     ];
@@ -28,5 +28,10 @@ class Bus extends Model
     public function seat_layout()
     {
         return $this->belongsTo('App\Master\SeatLayout', 'seat_layout_id');
+    }
+
+    public function bus_routes()
+    {
+      return $this->hasMany('App\Master\BusRoute');
     }
 }

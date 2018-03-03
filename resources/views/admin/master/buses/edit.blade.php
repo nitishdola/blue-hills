@@ -34,8 +34,7 @@ $('#select-bus-routes').selectize({
                 {!! implode('', $errors->all('<div class="alert alert-danger">:message</div>')) !!}
             @endif
 
-            <form class="form-horizontal" role="form" method="POST" action="{{ url('/admin/bus/save') }}">
-                        {{ csrf_field() }}
+            {!! Form::model($bus, array('route' => ['admin.bus.update', Crypt::encrypt($bus->id)], 'id' => 'bus.update', 'class' => 'form-horizontal row-border')) !!}
 
                 @include('admin.master.buses._create')
                 <br>

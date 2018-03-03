@@ -106,295 +106,7 @@
 		</button>
 	  </div>
 	  <div class="modal-body seat-layout-body">
-		<div class="col-md-4 col-xs-12">
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ booked container_2" data-seatno="1">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">&nbsp;</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="2">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ ladies container_2" data-seatno="3">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-			
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="4">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">&nbsp;</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="5">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ booked container_2" data-seatno="6">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ booked container_2" data-seatno="7">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">&nbsp;</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="8">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="9">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="10">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">&nbsp;</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="11">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="12">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="13">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">&nbsp;</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="14">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="15">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="16">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">&nbsp;</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="17">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="18">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="19">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">&nbsp;</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="20">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="21">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ booked container_2" data-seatno="22">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">&nbsp;</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="23">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="24">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ booked container_2" data-seatno="25">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">&nbsp;</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="26">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="27">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row seat-row">
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="28">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="29">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="30">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-				
-				<div class="col-md-2 col-xs-2">
-					<div class="_2gS_ container_2" data-seatno="31">
-						<span class="_2CpW _1Zjt"></span>
-						<span class="U6x5 _1Zjt"></span>
-						<span class="_19QY _1Zjt"></span>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="col-md-4 col-xs-12" id="seatLayoutBody"></div>
 		
 		<div class="col-md-4 col-xs-12">
 			<form>
@@ -471,12 +183,41 @@
 
 @section('pageJs')
 <script>
+function selectseat(seatno){
+	if ($(this).hasClass('booked')) {
+		alert('Seat booked');
+	}else if ($(this).hasClass('ladies')) {
+		alert('Seat booked');
+	}else if ($(this).hasClass('selet-seat')) {
+		$(this).removeClass('selet-seat');
+		
+		var seat_index = seats.indexOf(seatno);
+		if (seat_index > -1) {
+			seats.splice(seat_index, 1);
+		}
+		showSeats(seats);
+		calculateSeatFare(seats);
+		checkSelectedSeats(seats);
+	}else{
+		$(this).addClass('selet-seat');	
+		$('#no_seats').hide();
+		$('#selected_seats').show();
+		$('.pricing_details').show();
+		seatno = $(this).data("seatno");
+		seats.push(seatno);
+		showSeats(seats);
+		calculateSeatFare(seats);
+		checkSelectedSeats(seats);
+	}
+}
+
+
 	function viewSeats(route_id, e, id ) {
 		e.preventDefault();
 		var data = url = '';
 
-		//data = '&route_id='+route_id;
-		data = '&route_id=3';
+		data = '&route_id='+route_id;
+		//data = '&route_id=3';
 		url  = "{{ route('api.get_layout') }}";
 		//console.log(url+data);
 		$.ajax({
@@ -497,12 +238,103 @@
 	}
 
 	function showModal(seatLayout, id) {
-		
+		$html = '';
+
 		$('#modalBusName').text($('#jorney_time_'+id).text());
 		$.each(seatLayout, function (key, val) {
-			console.log(val.name);
+			if(key == 0) {
+				json_parsed = '';
+				json_parsed = $.parseJSON(val.layout);
+				$.each(json_parsed, function (k, v) {
+					$html += '<div class="row seat-row">';
+					$.each(v, function (key1, val1) {
+
+						
+						if(val1.type == 'seater') {
+							$html += '<div class="col-md-2 col-xs-2">';
+								$html += '<div class="_2gS_ container_2" data-seatno="'+val1.seat_no+'" onclick="selectseat('+val1.seat_no+')">';
+
+
+									$html += '<span class="_2CpW _1Zjt"></span>';
+									$html += '<span class="U6x5 _1Zjt"></span>';
+									$html += '<span class="_19QY _1Zjt"></span>';
+
+								$html += '</div>';
+							$html += '</div>';
+						}else{
+							$html += '<div class="col-md-2 col-xs-2">&nbsp;</div>';
+						}
+						
+					});
+					$html += '</div>';
+				});
+			}
 		});	
+		
+		$('#seatLayoutBody').html($html);
+
+		$('#seatModal').modal('show'); 
 	}
+</script>
+
+
+<script>
+
+
+var seats = [];
+var price = 450;
+
+$('._2gS_').on('click', function(e) {
+	alert('kkk');
+	e.preventDefault();
+	if ($(this).hasClass('booked')) {
+		alert('Seat booked');
+	}else if ($(this).hasClass('ladies')) {
+		alert('Seat booked');
+	}else if ($(this).hasClass('selet-seat')) {
+		$(this).removeClass('selet-seat');
+		seatno = $(this).data("seatno"); 
+		var seat_index = seats.indexOf(seatno);
+		if (seat_index > -1) {
+			seats.splice(seat_index, 1);
+		}
+		showSeats(seats);
+		calculateSeatFare(seats);
+		checkSelectedSeats(seats);
+	}else{
+		$(this).addClass('selet-seat');	
+		$('#no_seats').hide();
+		$('#selected_seats').show();
+		$('.pricing_details').show();
+		seatno = $(this).data("seatno");
+		seats.push(seatno);
+		showSeats(seats);
+		calculateSeatFare(seats);
+		checkSelectedSeats(seats);
+	}
+	
+});
+
+function showSeats(seats) {
+	$('#selected_seats').text(seats);
+}
+
+function calculateSeatFare(seats) {
+	fare = seats.length*price;
+	$('#totalPrice').text(fare.toFixed(2));
+}
+
+function checkSelectedSeats(seats) {
+	if(seats.length) {
+		$('#selected_seats').show();
+		$('.pricing_details').show();
+		$('#no_seats').hide();
+	}else{
+		$('#selected_seats').hide();
+		$('.pricing_details').hide();
+		$('#no_seats').show();
+	}
+}
 </script>
 @stop
 

@@ -31,7 +31,7 @@
 
     <link rel="stylesheet" href="{{ asset('world/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('world/css/mystyles.css') }}">
-    <script src="js/modernizr.js"></script>
+    
 
 	
 	<!--FONTS-->
@@ -61,14 +61,14 @@
         <script src="{{ asset('world/js/ionrangeslider.js') }}"></script>
         <script src="{{ asset('world/js/icheck.js') }}"></script>
         <script src="{{ asset('world/js/fotorama.js') }}"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+        <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script> -->
         <script src="{{ asset('world/js/typeahead.js') }}"></script>
         <script src="{{ asset('world/js/card-payment.js') }}"></script>
         <script src="{{ asset('world/js/magnific.js') }}"></script>
         <script src="{{ asset('world/js/owl-carousel.js') }}"></script>
         <script src="{{ asset('world/js/fitvids.js') }}"></script>
         <script src="{{ asset('world/js/tweet.js') }}"></script>
-        <script src="{{ asset('world/js/countdown.js') }}"></script>
+        <!-- <script src="{{ asset('world/js/countdown.js') }}"></script> -->
         <script src="{{ asset('world/js/gridrotator.js') }}"></script>
         <script src="{{ asset('world/js/custom.js') }}"></script>
         <script src="{{ asset('world/js/switcher.js') }}"></script>

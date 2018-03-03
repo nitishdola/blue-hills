@@ -19,4 +19,10 @@ class BusRoute extends Model
 	{
 		return $this->belongsTo('App\Master\Bus', 'bus_id');
 	}
+
+
+    public function route()
+    {
+        return $this->belongsTo('App\Master\Route', 'route_id');
+    }
 }

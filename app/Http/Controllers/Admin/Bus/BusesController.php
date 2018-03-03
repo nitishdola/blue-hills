@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 use App\Master\Bus,App\Master\Route, App\Master\SeatLayout, App\Master\BusRoute;
-use DB, Validator, Redirect;
+use DB, Validator, Redirect, Crypt;
 class BusesController extends Controller
 {
     /**
@@ -16,7 +16,8 @@ class BusesController extends Controller
      */
     public function index()
     {
-        //
+        $results = Bus::with('seat_layout', 'bus_routes.route.source', 'bus_routes.route.source')->get();
+        return view('admin.master.buses.index', compact('results'));
     }
 
     /**
@@ -104,7 +105,20 @@ class BusesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $id = Crypt::decrypt($id);
+
+        $bus = Bus::find($id);
+
+        $bus_types = Bus::$bus_types;
+        $seat_layouts_list = SeatLayout::pluck('name', 'id')->all();
+        $seat_layouts = SeatLayout::whereStatus(1)->get();
+        $bus_routes = Route::with('source', 'destination')->where('status',1)->get();
+        $bus_route_list = [];
+        foreach($bus_routes as $k => $v) {
+            $bus_route_list[$v->id] = $v->source['name'].' - '.$v->destination['name'];
+        }
+
+        return view('admin.master.buses.edit', compact('bus', 'bus_types', 'seat_layouts', 'seat_layouts_list', 'bus_route_list'));
     }
 
     /**
@@ -116,7 +130,54 @@ class BusesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $id     = Crypt::decrypt($id); 
+        $rules  = Bus::$rules;
+
+        $rules['bus_number']   = $rules['bus_number'] . ',id,' . $id;
+
+        $validator = Validator::make($data = $request->all(), $rules);
+        if ($validator->fails()) return Redirect::back()->withErrors($validator)->withInput();
+
+        $bus = Bus::findOrFail($id);
+
+        $message = '';
+
+        DB::beginTransaction();
+
+        try {
+
+            $bus->fill($data);
+            if($bus->save()) {
+
+                //delete existing routes
+                if(DB::table('bus_routes')->where('bus_id', $bus->id)->delete()) {
+                    //create new record
+                    foreach($request->bus_routes as $route) {
+                        $bus_routes = [];
+                        $bus_routes['bus_id']   = $bus->id;
+                        $bus_routes['route_id'] = $route;
+
+                        $validator = Validator::make($bus_routes, BusRoute::$rules);
+                        if ($validator->fails()) return Redirect::back()->withErrors($validator)->withInput();
+
+                        BusRoute::create($bus_routes);
+                    }
+                }
+                
+
+                $message .= 'Bus Updated Successfully !';
+            }else{
+                $message .= 'Bus to update  Department !';
+            }
+            
+        }catch(ValidationException $e)
+        {
+            return Redirect::back();
+        }
+
+        DB::commit();
+
+        return Redirect::route('admin.bus')->with('message', $message);
     }
 
     /**

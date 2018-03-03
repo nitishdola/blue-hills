@@ -38,7 +38,7 @@ Route::group(['prefix' => 'bus'], function () {
   Route::get('/', [
       'as' => 'bus',
       'middleware' => ['admin'],
-      'uses' => 'Admin\Bus\BusesController@viewAll'
+      'uses' => 'Admin\Bus\BusesController@index'
   ]);
 
   Route::get('/create', [
@@ -52,6 +52,20 @@ Route::group(['prefix' => 'bus'], function () {
       'middleware' => ['admin'],
       'uses' => 'Admin\Bus\BusesController@store'
   ]);
+
+
+  Route::get('/{id}/edit', [
+      'as' => 'bus.edit',
+      'middleware' => ['admin'],
+      'uses' => 'Admin\Bus\BusesController@edit'
+  ]);
+
+  Route::post('/{id}/update', [
+      'as' => 'bus.update',
+      'middleware' => ['admin'],
+      'uses' => 'Admin\Bus\BusesController@update'
+  ]);
+
 
   Route::group(['prefix' => 'routes'], function () {
     Route::get('/', [
