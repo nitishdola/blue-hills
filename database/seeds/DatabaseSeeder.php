@@ -11,7 +11,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call('AdminUser');
-        $this->command->info("Admin Users table seeded :)");
+        //$this->call('AdminUser');
+        //$this->command->info("Admin Users table seeded :)"); 
+
+        $this->call('Stoppages');
+        $this->command->info("Stoppages table seeded :)");
     }
 }

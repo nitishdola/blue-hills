@@ -36,6 +36,7 @@
         </div>
         <ul class="booking-list">
         	@foreach($search_results as $ki => $v)
+
             <li>
                 <a class="booking-item" href="#">
                     <div class="row">
@@ -48,6 +49,7 @@
 						
                         <div class="col-md-4">
                             <div class="booking-item-rating">
+                                <!-- 
                                 <ul class="icon-group booking-item-rating-stars">
                                     <li><i class="fa fa-star"></i>
                                     </li>
@@ -59,11 +61,12 @@
                                     </li>
                                     <li><i class="fa fa-star"></i>
                                     </li>
-                                </ul><span class="booking-item-rating-number"><b >4.8</b> of 5</span><small>(400 reviews)</small>
+                                </ul> -->
+                                <!-- <span class="booking-item-rating-number"><b >4.8</b> of 5</span><small>(400 reviews)</small> -->
                             </div>
                             
                             <h5 class="booking-item-title">Blue Hills</h5>
-                            <p class="booking-item-address"><i class="fa fa-map-marker"></i> ISBT </p>
+                            <p class="booking-item-address"><i class="fa fa-map-marker"></i> {{ ucfirst($from_stoppage->name) }} </p>
                             
                         </div>
 						
@@ -71,14 +74,17 @@
 							<div class="booking-item-rating">
 								<span class="booking-item-rating-number"><b ><span id="jorney_time_{{ $v->id }}"> {{ $v->start_time }} - {{ $v->end_time }}</span></b>
 								<h6 class="booking-item-title"> <i class="fa fa-clock-o" aria-hidden="true"></i>
-								Duration 08 h 30m  </h6>
+								Duration 
+								<?php $duration = Helper::convertToHoursMins( $v->route['journey_duration'] ); ?>
+								{{ $duration['h'] }} hours {{ $duration['m'] }} minutes
+								 </h6>
 								</span>
                             </div>
 						</div>
-						
+						<?php $arrival_date = Helper::getArrivalDate($journey_date, $v->route['journey_duration']); ?>
                         <div class="col-md-3"><span class="booking-item-price">&#x20b9;  450.00</span> <br>
 						<span class="btn btn-primary" data-toggle="modal" 
-						onclick="viewSeats({{ $v->route_id }}, event, {{ $v->id }})">
+						onclick="viewSeats({{ $v->route_id }}, event, {{ $v->id }}, '{{ $arrival_date }}' )">
 					View Seats</span>
                         </div>
                     </div>
@@ -113,16 +119,17 @@
 				<div class="form-group form-group-lg">
 					<label>Boarding Point</label>
 					<select class="form-control">
-						<option value="">Paltan Bazar</option>
-						<option value="">ISBT-Guwahati</option>
-						<option value="">Beltola Chariali</option>
-						<option value="">Khanapara</option>
+						@foreach($from_stoppages as $from_stoppage)
+							<option value="{{ $from_stoppage->id }}"> {{ $from_stoppage->name }} </option>
+						@endforeach
 					</select>
 				</div>
 				<div class="form-group form-group-lg">
 					<label>Dropping Point</label>
 					<select class="form-control">
-						<option value="">Dibrugarh</option>
+						@foreach($to_stoppages as $to_stoppage)
+							<option value="{{ $to_stoppage->id }}"> {{ $to_stoppage->name }} </option>
+						@endforeach
 					</select>
 				</div>
 			</form>
@@ -134,14 +141,14 @@
 			<div class="booking-item-payment">
 				<ul class="booking-item-payment-details">
 					<li>
-						<h5>Guwahati - Dibrugarh</h5>
+						<h5>{{ $source_city_name }} - {{ $destination_city_name }}</h5>
 						<div class="booking-item-payment-date col-xs-12">
-							<p class="booking-item-payment-date-day">02-02-2018</p>
-							<p class="booking-item-payment-date-weekday">Guwahati</p>
+							<p class="booking-item-payment-date-day">{{ $journey_date }}</p>
+							<p class="booking-item-payment-date-weekday">{{ $source_city_name }}</p>
 						</div><i class="fa fa-arrow-right booking-item-payment-date-separator"></i>
 						<div class="booking-item-payment-date  col-xs-12">
-							<p class="booking-item-payment-date-day">03-02-2018</p>
-							<p class="booking-item-payment-date-weekday">Dibrugarh</p>
+							<p class="booking-item-payment-date-day"><span id="arrival_date"></span></p>
+							<p class="booking-item-payment-date-weekday">{{ $destination_city_name }}</p>
 						</div>
 					</li>
 					<li>
@@ -184,12 +191,14 @@
 @section('pageJs')
 <script>
 function selectseat(seatno){
-	if ($(this).hasClass('booked')) {
+	currentSeat = $('#seatID'+seatno);
+	
+	if (currentSeat.hasClass('booked')) {
 		alert('Seat booked');
-	}else if ($(this).hasClass('ladies')) {
+	}else if (currentSeat.hasClass('ladies')) {
 		alert('Seat booked');
-	}else if ($(this).hasClass('selet-seat')) {
-		$(this).removeClass('selet-seat');
+	}else if (currentSeat.hasClass('selet-seat')) {
+		currentSeat.removeClass('selet-seat');
 		
 		var seat_index = seats.indexOf(seatno);
 		if (seat_index > -1) {
@@ -199,11 +208,11 @@ function selectseat(seatno){
 		calculateSeatFare(seats);
 		checkSelectedSeats(seats);
 	}else{
-		$(this).addClass('selet-seat');	
+		currentSeat.addClass('selet-seat');	
 		$('#no_seats').hide();
 		$('#selected_seats').show();
 		$('.pricing_details').show();
-		seatno = $(this).data("seatno");
+		seatno = currentSeat.data("seatno");
 		seats.push(seatno);
 		showSeats(seats);
 		calculateSeatFare(seats);
@@ -212,7 +221,7 @@ function selectseat(seatno){
 }
 
 
-	function viewSeats(route_id, e, id ) {
+	function viewSeats(route_id, e, id, arrival_date ) {
 		e.preventDefault();
 		var data = url = '';
 
@@ -232,6 +241,7 @@ function selectseat(seatno){
 
 			success : function(resp) {
 				//console.log(resp);
+				$('#arrival_date').text(arrival_date);
 				showModal(resp, id)
 			}
 		});
@@ -239,6 +249,8 @@ function selectseat(seatno){
 
 	function showModal(seatLayout, id) {
 		$html = '';
+
+		$('#seatLayoutBody').empty();
 
 		$('#modalBusName').text($('#jorney_time_'+id).text());
 		$.each(seatLayout, function (key, val) {
@@ -252,7 +264,7 @@ function selectseat(seatno){
 						
 						if(val1.type == 'seater') {
 							$html += '<div class="col-md-2 col-xs-2">';
-								$html += '<div class="_2gS_ container_2" data-seatno="'+val1.seat_no+'" onclick="selectseat('+val1.seat_no+')">';
+								$html += '<div class="_2gS_ container_2" id="seatID'+val1.seat_no+'" data-seatno="'+val1.seat_no+'" onclick="selectseat('+val1.seat_no+')">';
 
 
 									$html += '<span class="_2CpW _1Zjt"></span>';
